@@ -18,7 +18,7 @@ public class MainClassFromLessionOne {
 
 
 
-    private static void ex1() {
+    private static void ex1(String[] args) {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("name: ");
         String name = iScanner.nextLine();
