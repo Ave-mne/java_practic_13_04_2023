@@ -10,9 +10,8 @@ public class MainClassFromHomeWork1 {
         //ex1();
         //ex2();
         //ex3();
-
-        ex4();
-        //ex5();
+        //ex4();
+        ex5();
     }
 
 
@@ -110,10 +109,49 @@ private static void ex1() {
             System.out.printf("Доброе утро, %s!", name);
         }
     }
+
+// 5.** Написать метод, которому на вход подается одномерный массив и число n (может быть
+// положительным, или отрицательным), при этом метод должен сместить все элементы массива
+// на n позиций. Элементы смещаются циклично. Для усложнения задачи нельзя пользоваться
+// вспомогательными массивами. Примеры: [ 1, 2, 3 ] при n = 1 (на один вправо) -> [ 3, 1, 2 ];
+// [ 3, 5, 6, 1] при n = -2 (на два влево) -> [ 6, 1, 3, 5 ].
+// При каком n в какую сторону сдвиг можете выбирать сами.
+    private static void ex5()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введите N: ");
+        int num = in.nextInt();
+        in.close();
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println("Массив до сдвига:\t\t" + Arrays.toString(arr));
+        int length = arr.length;
+
+        if (num < 0)
+        {
+            for (int i = 0; i < -num; i++)
+            {
+                int buffer = arr[length - 1];
+                System.arraycopy(arr, 0, arr, 1, length - 1);
+                arr[0] = buffer;
+            }
+        }
+        else if (num > 0)
+        {
+            for (int i = 0; i < num; i++)
+            {
+                int buffer = arr[0];
+                System.arraycopy(arr, 1, arr, 0, length - 1);
+                arr[length - 1] = buffer;
+            }
+        }
+
+        System.out.println("Значение N = " + num);
+        System.out.print("Массив после сдвига:\t" + Arrays.toString(arr) + "\n\n");
+    }
+
+
+
+
+
+
 }
-
-
-
-
-
-
