@@ -96,7 +96,7 @@ private static void ex1() {
 
         Date date = new Date();
         int hours = date.getHours();
-        if (hours > 23 && hours > 5){
+        if (hours > 23 && hours < 5){
             System.out.printf("Доброй ночи, %s!", name);
         }
         if (hours < 23 && hours > 18){
