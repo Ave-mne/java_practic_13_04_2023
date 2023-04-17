@@ -1,6 +1,8 @@
 package Lesson1;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Scanner;
 
 public class MainClassFromHomeWork1 {
@@ -8,10 +10,10 @@ public class MainClassFromHomeWork1 {
         //ex1();
         //ex2();
         //ex3();
-        //ex4();
+
+        ex4();
         //ex5();
     }
-
 
 
 
@@ -33,7 +35,7 @@ private static void ex1() {
     System.out.println(Arrays.toString(result));
 
     f.close();
-}
+    }
 
     private static int[] ArrayLen(int len, int initialValue) {
 
@@ -68,7 +70,7 @@ private static void ex1() {
 // диагоналей, если обе сложно). Определить элементы одной из диагоналей можно по следующему
 // принципу: индексы таких элементов равны, то есть [0][0], [1][1], [2][2], …, [n][n];
 
-    private static void ex3(int[][] arr)
+    private static void ex3(int [][] arr)
     {
         for (int i = 0; i <= arr.length; i++) {
             for (int j = 0; j <= arr.length; j++) {
@@ -81,5 +83,37 @@ private static void ex1() {
         }
     }
 
+// 4.В консоли запросить имя пользователя. В зависимости от текущего времени, вывести приветствие вида:
+//  "Доброе утро, <Имя>!", если время от 05:00 до 11:59
+//  "Добрый день, <Имя>!", если время от 12:00 до 17:59;
+//  "Добрый вечер, <Имя>!", если время от 18:00 до 22:59;
+//  "Доброй ночи, <Имя>!", если время от 23:00 до 4:59
 
+    public static void ex4() {
+        Scanner iScanner = new Scanner(System.in);
+        System.out.printf("Введите имя: ");
+        String name = iScanner.nextLine();
+        iScanner.close();
+
+        Date date = new Date();
+        int hours = date.getHours();
+        if (hours > 23 && hours > 5){
+            System.out.printf("Доброй ночи, %s!", name);
+        }
+        if (hours < 23 && hours > 18){
+            System.out.printf("Добрый вечер, %s!", name);
+        }
+        if (hours > 12 && hours < 18){
+            System.out.printf("Добрый день, %s!", name);
+        }
+        if (hours > 5 && hours < 12){
+            System.out.printf("Доброе утро, %s!", name);
+        }
+    }
 }
+
+
+
+
+
+
