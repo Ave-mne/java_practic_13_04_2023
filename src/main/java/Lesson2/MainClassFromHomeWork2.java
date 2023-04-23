@@ -1,10 +1,16 @@
 package Lesson2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Objects;
+
 public class MainClassFromHomeWork2 {
     public static void main(String[] args) {
-        ex1();
-        //ex2();
+        //ex1();
+        ex2();
 }
+
+
 
 // 1. Дана строка sql-запроса "select * from students where ". Сформируйте часть WHERE этого запроса,
 // используя StringBuilder. Данные для фильтрации приведены ниже в виде json-строки.
@@ -43,4 +49,24 @@ public class MainClassFromHomeWork2 {
         }
         System.out.println(initialRequest + res.toString());
     }
+
+
+// 2.Напишите метод, который определит тип (расширение) файлов из текущей папки и
+// выведет в консоль результат вида:
+//    1 Расширение файла: txt
+//    2 Расширение файла: pdf
+//    3 Расширение файла:
+//    4 Расширение файла: jpg
+
+    private static void ex2() {
+        String path = "C:\\Users\\Андрей\\IdeaProjects\\java_practic_13_04_2023\\Java_l1.txt";
+        String extension = "";
+
+        if (path.contains("."))
+            extension = path.substring(path.lastIndexOf(".") + 1);
+        System.out.println("Расширение файла: " + extension);
+        }
+
+
+
 }
