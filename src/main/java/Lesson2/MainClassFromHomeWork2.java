@@ -59,14 +59,23 @@ public class MainClassFromHomeWork2 {
 //    4 Расширение файла: jpg
 
     private static void ex2() {
-        String path = "C:\\Users\\Андрей\\IdeaProjects\\java_practic_13_04_2023\\Java_l1.txt";
-        String extension = "";
+        File file = new File("C:\\Users\\Андрей\\IdeaProjects\\java_practic_13_04_2023");
+        for (String fileName : Objects.requireNonNull(file.list())){
+            String str = fileName;
+            String extension = "";
 
-        if (path.contains("."))
-            extension = path.substring(path.lastIndexOf(".") + 1);
-        System.out.println("Расширение файла: " + extension);
+            if (str.contains("."))
+                extension = str.substring(str.lastIndexOf(".") + 1);
+            System.out.println("Расширение файла: " + extension);
+
+            }
         }
-
-
-
 }
+
+
+
+
+
+
+
+
