@@ -59,7 +59,7 @@ public class MainClassFromHomeWork2 {
 //    4 Расширение файла: jpg
 
     private static void ex2() {
-        File file = new File("C:\\Users\\Андрей\\IdeaProjects\\java_practic_13_04_2023");
+        File file = new File("C:\\Users\\Андрей\\IdeaProjects\\java_practic_13_04_2023\\Example");
         for (String fileName : Objects.requireNonNull(file.list())){
             String str = fileName;
             String extension = "";
