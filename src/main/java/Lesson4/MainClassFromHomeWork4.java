@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MainClassFromHomeWork4 {
     public static void main(String[] args) {
-        ex1();
+        //ex1();
         //ex2();
     }
 
