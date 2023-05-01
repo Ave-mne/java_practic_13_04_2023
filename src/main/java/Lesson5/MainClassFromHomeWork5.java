@@ -158,7 +158,6 @@ public class MainClassFromHomeWork5 {
             System.out.println();
         }
     }
-
     private static boolean findPosition(int row, int[] queens) {
         if (row == 8) {
             return true;
@@ -180,7 +179,4 @@ public class MainClassFromHomeWork5 {
         }
         return false;
     }
-
-
-
 }
