@@ -35,11 +35,7 @@ public class MainClassFromHomeWork6 {
         laptop3.setDiscVolume(1024);
         laptop.addToBase(laptop3);
         laptop.findInBase(laptop.laptopBase);
-
-
         }
-
-
     }
 
 
@@ -60,7 +56,6 @@ public class MainClassFromHomeWork6 {
             this.ram = ram;
             this.discType = discType;
             this.discVolume = discVolume;
-
         }
 
         public Laptop() {
@@ -116,9 +111,7 @@ public class MainClassFromHomeWork6 {
 
         @Override
         public String toString() {
-
             return color + " " + os + " " + ram + " " + discType + " " + discVolume;
-
         }
 
         public Map addToBase(Laptop newLaptop) {
@@ -131,7 +124,6 @@ public class MainClassFromHomeWork6 {
             int findID;
             String Condition;
             Scanner input = new Scanner(System.in);
-
             System.out.println("Введите параметр для поиска: 1-цвет, 2-Операционная система, 3 - Объем оперативной памяти, " +
                     "4- Тип жесткого диска, 5-объем жесткого диска");
             findID = input.nextInt();
